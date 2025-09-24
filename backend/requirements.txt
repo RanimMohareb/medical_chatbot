@@ -1,0 +1,10 @@
+flask
+flask-cors
+flask-jwt-extended
+python-dotenv
+werkzeug
+pymongo
+faiss-cpu
+sentence-transformers
+beautifulsoup4
+requests

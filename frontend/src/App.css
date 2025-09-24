@@ -1,0 +1,171 @@
+/* App base styles */
+.App {
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+/* Optional: logo animation */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Header styles */
+.App-header {
+  background-color: #282c34;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Link style */
+.App-link {
+  color: #61dafb;
+}
+
+/* Spinning logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Chatbot container */
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form input and button layout */
+.container form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.container button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+.container button:hover {
+  background-color: #45a049;
+}
+
+.container button:disabled {
+  background-color: #a5d6a7;
+  cursor: wait;
+}
+
+/* Chatbox styles */
+.chat-box {
+  margin-top: 30px;
+  max-height: 700px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-pair {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat {
+  max-width: 75%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.chat.user {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+  text-align: right;
+}
+
+.chat.bot {
+  background-color: #f1f0f0;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+  text-align: left;
+}
+
+.timestamp {
+  font-size: 0.75em;
+  color: #777;
+  margin-top: 4px;
+  align-self: center;
+}
+
+/* Typing animation */
+.typing {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.typing span {
+  display: inline-block;
+  animation: blink 1.4s infinite;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
